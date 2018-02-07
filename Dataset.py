@@ -75,8 +75,8 @@ class Dataset(object):
             line = f.readline()
         f.close()
 
-        f = open("data/"+self.data_name+".train.link")  # 返回一个文件对象
-        line = f.readline()  # 调用文件的 readline()方法
+        f = open("data/"+self.data_name+".train.link") 
+        line = f.readline()  
         while line:
             line = line.rstrip()
             arr = line.split('\t')
