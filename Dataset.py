@@ -3,8 +3,6 @@ import time,datetime
 import random
 import pickle
 
-import pymysql
-
 
 def Normalization_gowalla(inX):
     return 1.0 / (1 + np.exp(-inX))
