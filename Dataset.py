@@ -54,8 +54,8 @@ class Dataset(object):
     def get_inter_data(self):
         user_r = {}
         count = 0
-        f = open("data/"+self.data_name+".train.rating")  # 返回一个文件对象
-        line = f.readline()  # 调用文件的 readline()方法
+        f = open("data/"+self.data_name+".train.rating") 
+        line = f.readline()  
         while line:
             line = line.rstrip()
             arr = line.split('\t')
@@ -85,11 +85,11 @@ class Dataset(object):
                 user_r[user1] = [1]
                 for i in range(20):
                     self.train_id_list.append([user1, i+1])
-            line = f.readline()  # 调用文件的 readline()方法
+            line = f.readline()  
         f.close()
 
-        f = open("data/"+self.data_name+".train.rating")  # 返回一个文件对象
-        line = f.readline()  # 调用文件的 readline()方法
+        f = open("data/"+self.data_name+".train.rating") 
+        line = f.readline()  
         train_data_num_T = 0
         while line:
             line = line.rstrip()
@@ -113,12 +113,12 @@ class Dataset(object):
                 self.spot_dict[spot_id] = [[user_id,rating, step]]
 
             train_data_num_T += 1
-            line = f.readline()  # 调用文件的 readline()方法
+            line = f.readline()  
         f.close()
 
 
-        f = open("data/"+self.data_name+".train.link")  # 返回一个文件对象
-        line = f.readline()  # 调用文件的 readline()方法
+        f = open("data/"+self.data_name+".train.link") 
+        line = f.readline()  
         while line:
             line = line.rstrip()
             arr = line.split('\t')
@@ -196,8 +196,8 @@ class Dataset(object):
 
     def get_test_rating(self):
         print("start getting test rating...")
-        f = open("data/"+self.data_name+".test.rating")  # 返回一个文件对象
-        line = f.readline()  # 调用文件的 readline()方法
+        f = open("data/"+self.data_name+".test.rating")
+        line = f.readline()  
         while line:
             line = line.rstrip()
             arr = line.split('\t')
@@ -229,8 +229,8 @@ class Dataset(object):
         self.last_pre = {}
         self.till_record = {}
         print("start getting test link...")
-        f = open("data/"+self.data_name+".test.link")  # 返回一个文件对象
-        line = f.readline()  # 调用文件的 readline()方法
+        f = open("data/"+self.data_name+".test.link") 
+        line = f.readline()  
         while line:
             line = line.rstrip()
             arr = line.split('\t')
